@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MiniCompiler 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>MiniCompiler 2025</h1>
+        <p>A simple educational compiler with lexical, syntax, and semantic analysis</p>
+    </header>
+
+    <div class="panels">
+        <div class="panel">
+            <h3>Input Source Code</h3>
+            <textarea id="code" placeholder="Write or paste your code here...&#10;&#10;Example:&#10;int age = 25;&#10;String name = &quot;John&quot;;"></textarea>
+        </div>
+        <div class="panel">
+            <h3>Compiler Output</h3>
+            <pre id="result" class="result-output">Click "Open File" to load your code and begin analysis.</pre>
+        </div>
+    </div>
+
+    <div class="controls">
+        <label class="btn open-btn" id="openBtn">
+            <input type="file" id="fileInput" accept=".txt,.java,text/plain" hidden>
+            Open File
+        </label>
+
+        <button id="lexicalBtn" class="btn" disabled>Lexical Analysis</button>
+        <button id="syntaxBtn" class="btn" disabled>Syntax Analysis</button>
+        <button id="semanticBtn" class="btn" disabled>Semantic Analysis</button>
+        <button id="clearBtn" class="btn secondary">Clear All</button>
+    </div>
+
+    <div class="progress">
+        <span>Progress:</span>
+        <div class="steps">
+            <div class="step" id="step-lexical">Lexical</div>
+            <div class="step" id="step-syntax">Syntax</div>
+            <div class="step" id="step-semantic">Semantic</div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
